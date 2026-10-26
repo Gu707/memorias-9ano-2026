@@ -1,0 +1,1713 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Memórias do 9º Ano – 2026</title>
+
+    <meta
+        name="description"
+        content="Memórias do 9º Ano – 2026. Um espaço para guardar histórias, lembranças e sonhos desta turma."
+    >
+
+    <style>
+
+        /* =====================================================
+           CONFIGURAÇÕES GERAIS
+        ===================================================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+
+            --amarelo: #f5b900;
+            --amarelo-claro: #ffd84d;
+            --amarelo-escuro: #d99d00;
+
+            --preto: #111111;
+            --cinza: #555555;
+            --cinza-claro: #f5f5f5;
+
+            --branco: #ececec;
+
+            --borda: #e7e7e7;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+
+            font-family:
+                Arial,
+                Helvetica,
+                sans-serif;
+
+            background: var(--cinza-claro);
+
+            color: var(--preto);
+
+            min-height: 100vh;
+
+        }
+
+
+        /* =====================================================
+           ELEMENTOS DECORATIVOS
+        ===================================================== */
+
+        .ponto {
+
+            position: absolute;
+
+            width: 5px;
+            height: 5px;
+
+            background: var(--amarelo);
+
+            border-radius: 50%;
+
+        }
+
+        .pontos {
+
+            position: absolute;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 7px);
+
+            gap: 8px;
+
+            opacity: 0.9;
+
+        }
+
+        .pontos span {
+
+            width: 6px;
+            height: 6px;
+
+            background: var(--amarelo);
+
+            border-radius: 50%;
+
+        }
+
+
+        /* =====================================================
+           HERO
+        ===================================================== */
+
+        header {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--branco);
+
+            min-height: 500px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 80px 20px 100px;
+
+            border-bottom: 1px solid var(--borda);
+
+        }
+
+
+        /* grande faixa amarela */
+
+        header::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -180px;
+            left: -150px;
+
+            width: 550px;
+            height: 430px;
+
+            background: var(--amarelo);
+
+            border-radius: 0 0 60% 0;
+
+            transform: rotate(-8deg);
+
+        }
+
+
+        /* curva amarela inferior */
+
+        header::after {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -110px;
+            right: -100px;
+
+            width: 500px;
+            height: 260px;
+
+            background: var(--amarelo);
+
+            border-radius: 60% 0 0 0;
+
+            transform: rotate(-5deg);
+
+        }
+
+
+        .hero-conteudo {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 950px;
+
+        }
+
+
+        /* selo */
+
+        .selo {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 90px;
+            height: 90px;
+
+            border: 7px solid var(--amarelo);
+
+            border-radius: 50%;
+
+            margin-bottom: 25px;
+
+            font-size: 2.7rem;
+
+            background: var(--branco);
+
+            box-shadow:
+                0 5px 0 var(--preto);
+
+        }
+
+
+        .subtitulo {
+
+            font-size: 1rem;
+
+            font-weight: bold;
+
+            letter-spacing: 3px;
+
+            text-transform: uppercase;
+
+            color: var(--cinza);
+
+            margin-bottom: 10px;
+
+        }
+
+
+        h1 {
+
+            font-size: clamp(
+                3rem,
+                8vw,
+                6rem
+            );
+
+            line-height: 0.95;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: -3px;
+
+            color: var(--preto);
+
+        }
+
+
+        h1 span {
+
+            color: var(--amarelo);
+
+        }
+
+
+        .linha-amarela {
+
+            width: 100px;
+
+            height: 8px;
+
+            background: var(--amarelo);
+
+            margin: 28px auto;
+
+            border-radius: 10px;
+
+        }
+
+
+        .hero-texto {
+
+            max-width: 700px;
+
+            margin: auto;
+
+            color: var(--cinza);
+
+            font-size: 1.1rem;
+
+            line-height: 1.7;
+
+        }
+
+
+        .ano {
+
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 10px 24px;
+
+            background: var(--preto);
+
+            color: var(--branco);
+
+            font-weight: bold;
+
+            border-radius: 4px;
+
+            letter-spacing: 2px;
+
+        }
+
+
+        /* =====================================================
+           CONTEÚDO
+        ===================================================== */
+
+        main {
+
+            max-width: 1250px;
+
+            margin: auto;
+
+            padding: 80px 20px;
+
+        }
+
+
+        .titulo-secao {
+
+            text-align: center;
+
+            margin-bottom: 15px;
+
+            font-size: clamp(
+                2rem,
+                5vw,
+                3rem
+            );
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+        }
+
+
+        .titulo-secao span {
+
+            color: var(--amarelo-escuro);
+
+        }
+
+
+        .descricao {
+
+            text-align: center;
+
+            max-width: 750px;
+
+            margin: 0 auto 45px;
+
+            color: var(--cinza);
+
+            line-height: 1.7;
+
+            font-size: 1.05rem;
+
+        }
+
+
+        /* =====================================================
+           PESQUISA
+        ===================================================== */
+
+        .pesquisa {
+
+            max-width: 650px;
+
+            margin: 0 auto 50px;
+
+            position: relative;
+
+        }
+
+
+        .pesquisa input {
+
+            width: 100%;
+
+            padding: 18px 22px;
+
+            border: 2px solid var(--borda);
+
+            border-radius: 5px;
+
+            background: var(--branco);
+
+            font-size: 1rem;
+
+            outline: none;
+
+            transition: 0.2s;
+
+        }
+
+
+        .pesquisa input:focus {
+
+            border-color: var(--amarelo);
+
+            box-shadow:
+                0 0 0 4px rgba(
+                    245,
+                    185,
+                    0,
+                    0.15
+                );
+
+        }
+
+
+        /* =====================================================
+           GRID
+        ===================================================== */
+
+        .alunos {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(4, 1fr);
+
+            gap: 22px;
+
+        }
+
+
+        /* =====================================================
+           CARDS
+        ===================================================== */
+
+        .card {
+
+            position: relative;
+
+            overflow: hidden;
+
+            background: var(--branco);
+
+            border: 1px solid var(--borda);
+
+            min-height: 230px;
+
+            padding: 28px 22px;
+
+            text-decoration: none;
+
+            color: var(--preto);
+
+            display: flex;
+
+            flex-direction: column;
+
+            text-align: center;
+
+            transition:
+                transform 0.25s ease,
+                box-shadow 0.25s ease;
+
+        }
+
+
+        /* faixa amarela superior */
+
+        .card::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            height: 7px;
+
+            background: var(--amarelo);
+
+        }
+
+
+        /* detalhe amarelo no canto */
+
+        .card::after {
+
+            content: "";
+
+            position: absolute;
+
+            right: -35px;
+            bottom: -35px;
+
+            width: 90px;
+            height: 90px;
+
+            background: var(--amarelo);
+
+            border-radius: 50%;
+
+            transition: 0.3s;
+
+        }
+
+
+        .card:hover {
+
+            transform: translateY(-8px);
+
+            box-shadow:
+                0 18px 35px
+                rgba(
+                    0,
+                    0,
+                    0,
+                    0.12
+                );
+
+        }
+
+
+        .card:hover::after {
+
+            width: 130px;
+            height: 130px;
+
+        }
+
+
+        .numero {
+
+            display: inline-flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            width: 42px;
+            height: 42px;
+
+            margin: 0 auto 20px;
+
+            border-radius: 50%;
+
+            background: var(--preto);
+
+            color: var(--amarelo);
+
+            font-weight: 900;
+
+            font-size: 0.85rem;
+
+        }
+
+
+        .nome {
+
+            position: relative;
+
+            z-index: 2;
+
+            flex: 1;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            font-size: 1.05rem;
+
+            line-height: 1.45;
+
+            font-weight: 800;
+
+        }
+
+
+        .botao {
+
+            position: relative;
+
+            z-index: 3;
+
+            display: inline-block;
+
+            margin: 20px auto 0;
+
+            padding: 10px 20px;
+
+            background: var(--amarelo);
+
+            color: var(--preto);
+
+            font-size: 0.8rem;
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            letter-spacing: 1px;
+
+            transition: 0.2s;
+
+        }
+
+
+        .card:hover .botao {
+
+            background: var(--preto);
+
+            color: var(--branco);
+
+        }
+
+
+        /* =====================================================
+           SEM RESULTADO
+        ===================================================== */
+
+        #semResultado {
+
+            display: none;
+
+            text-align: center;
+
+            padding: 50px;
+
+            color: var(--cinza);
+
+            background: var(--branco);
+
+            border: 1px solid var(--borda);
+
+        }
+
+
+        /* =====================================================
+           FRASE FINAL
+        ===================================================== */
+
+        .frase-final {
+
+            margin-top: 80px;
+
+            padding: 60px 25px;
+
+            background: var(--preto);
+
+            color: var(--branco);
+
+            text-align: center;
+
+            position: relative;
+
+            overflow: hidden;
+
+        }
+
+
+        .frase-final::before {
+
+            content: "";
+
+            position: absolute;
+
+            top: -80px;
+            left: -80px;
+
+            width: 200px;
+            height: 200px;
+
+            background: var(--amarelo);
+
+            border-radius: 50%;
+
+        }
+
+
+        .frase-final::after {
+
+            content: "";
+
+            position: absolute;
+
+            bottom: -100px;
+            right: -80px;
+
+            width: 230px;
+            height: 230px;
+
+            background: var(--amarelo);
+
+            border-radius: 50%;
+
+        }
+
+
+        .frase-final h2 {
+
+            position: relative;
+
+            z-index: 2;
+
+            font-size: clamp(
+                2rem,
+                5vw,
+                3.5rem
+            );
+
+            font-weight: 900;
+
+            text-transform: uppercase;
+
+            margin-bottom: 15px;
+
+        }
+
+
+        .frase-final h2 span {
+
+            color: var(--amarelo);
+
+        }
+
+
+        .frase-final p {
+
+            position: relative;
+
+            z-index: 2;
+
+            max-width: 650px;
+
+            margin: auto;
+
+            color: #d1d1d1;
+
+            line-height: 1.7;
+
+        }
+
+
+        /* =====================================================
+           RODAPÉ
+        ===================================================== */
+
+        footer {
+
+            background: var(--preto);
+
+            color: #aaa;
+
+            text-align: center;
+
+            padding: 35px 20px;
+
+            border-top: 5px solid var(--amarelo);
+
+        }
+
+
+        footer strong {
+
+            color: var(--branco);
+
+        }
+
+
+        footer .destaque {
+
+            color: var(--amarelo);
+
+        }
+
+
+        /* =====================================================
+           RESPONSIVIDADE
+        ===================================================== */
+
+        @media (max-width: 1050px) {
+
+            .alunos {
+
+                grid-template-columns:
+                    repeat(3, 1fr);
+
+            }
+
+        }
+
+
+        @media (max-width: 750px) {
+
+            header {
+
+                min-height: 550px;
+
+            }
+
+            header::before {
+
+                width: 350px;
+                height: 300px;
+
+            }
+
+            header::after {
+
+                width: 350px;
+
+            }
+
+            .alunos {
+
+                grid-template-columns:
+                    repeat(2, 1fr);
+
+            }
+
+            h1 {
+
+                letter-spacing: -2px;
+
+            }
+
+        }
+
+
+        @media (max-width: 500px) {
+
+            header {
+
+                padding:
+                    70px
+                    15px
+                    90px;
+
+            }
+
+            .alunos {
+
+                grid-template-columns:
+                    1fr;
+
+            }
+
+            main {
+
+                padding:
+                    60px
+                    15px;
+
+            }
+
+            .hero-texto {
+
+                font-size: 1rem;
+
+            }
+
+            .selo {
+
+                width: 75px;
+                height: 75px;
+
+                font-size: 2rem;
+
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+    ====================================================== -->
+
+    <header>
+
+
+        <div class="pontos" style="
+            top: 35px;
+            left: 35px;
+        ">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+        <div class="hero-conteudo">
+
+
+            <div class="selo">
+                🎓
+            </div>
+
+
+            <div class="subtitulo">
+                Instituto Educacional Maria Madalena
+            </div>
+
+
+            <h1>
+                Memórias<br>
+                do <span>9º Ano</span>
+            </h1>
+
+
+            <div class="linha-amarela"></div>
+
+
+            <p class="hero-texto">
+
+                Uma página para guardar aquilo que não
+                queremos esquecer: as histórias, as
+                amizades, os aprendizados e os sonhos
+                de uma turma que está encerrando uma etapa.
+
+            </p>
+
+
+            <div class="ano">
+                2026
+            </div>
+
+
+        </div>
+
+
+        <div class="pontos" style="
+            bottom: 45px;
+            right: 40px;
+        ">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+
+    </header>
+
+
+
+    <!-- =====================================================
+         CONTEÚDO
+    ====================================================== -->
+
+    <main>
+
+
+        <h2 class="titulo-secao">
+
+            Conheça a <span>turma</span>
+
+        </h2>
+
+
+        <p class="descricao">
+
+            Cada aluno possui uma história diferente.
+            Clique em um dos nomes abaixo para conhecer
+            as memórias, experiências e sonhos de quem
+            fez parte do 9º Ano de 2026.
+
+        </p>
+
+
+
+        <!-- PESQUISA -->
+
+        <div class="pesquisa">
+
+            <input
+                type="text"
+                id="campoPesquisa"
+                placeholder="🔎  Procurar aluno..."
+                aria-label="Procurar aluno"
+            >
+
+        </div>
+
+
+
+        <!-- =================================================
+             ALUNOS
+        ================================================== -->
+
+        <section
+            class="alunos"
+            id="listaAlunos"
+        >
+
+
+            <!-- 01 -->
+
+            <a
+                class="card"
+                href="alunos/alvaro-anthonny.html"
+                data-nome="Alvaro Anthonny Costa De Souza"
+            >
+
+                <span class="numero">01</span>
+
+                <span class="nome">
+                    Alvaro Anthonny<br>
+                    Costa De Souza
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 02 -->
+
+            <a
+                class="card"
+                href="alunos/ana-theresa.html"
+                data-nome="Ana Theresa Reis Leonardo"
+            >
+
+                <span class="numero">02</span>
+
+                <span class="nome">
+                    Ana Theresa<br>
+                    Reis Leonardo
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 03 -->
+
+            <a
+                class="card"
+                href="alunos/crizam.html"
+                data-nome="Crizam Da Penha Reis Neto"
+            >
+
+                <span class="numero">03</span>
+
+                <span class="nome">
+                    Crizam Da Penha<br>
+                    Reis Neto
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 04 -->
+
+            <a
+                class="card"
+                href="alunos/filipe.html"
+                data-nome="Filipe De Oliveira Pontes Da Fonseca"
+            >
+
+                <span class="numero">04</span>
+
+                <span class="nome">
+                    Filipe De Oliveira<br>
+                    Pontes Da Fonseca
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 05 -->
+
+            <a
+                class="card"
+                href="alunos/heytor.html"
+                data-nome="Heytor Castelo Branco Saraiva"
+            >
+
+                <span class="numero">05</span>
+
+                <span class="nome">
+                    Heytor Castelo<br>
+                    Branco Saraiva
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 06 -->
+
+            <a
+                class="card"
+                href="alunos/isabelle.html"
+                data-nome="Isabelle Fonseca Gomes"
+            >
+
+                <span class="numero">06</span>
+
+                <span class="nome">
+                    Isabelle<br>
+                    Fonseca Gomes
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 07 -->
+
+            <a
+                class="card"
+                href="alunos/janyellen.html"
+                data-nome="Janyellen Martins Resplandes"
+            >
+
+                <span class="numero">07</span>
+
+                <span class="nome">
+                    Janyellen<br>
+                    Martins Resplandes
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 08 -->
+
+            <a
+                class="card"
+                href="alunos/joao-vitor.html"
+                data-nome="João Vitor Carvalho Oliveira"
+            >
+
+                <span class="numero">08</span>
+
+                <span class="nome">
+                    João Vitor<br>
+                    Carvalho Oliveira
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 09 -->
+
+            <a
+                class="card"
+                href="alunos/kallyel.html"
+                data-nome="Kallyel De Jesus Aguiar Moreira"
+            >
+
+                <span class="numero">09</span>
+
+                <span class="nome">
+                    Kallyel De Jesus<br>
+                    Aguiar Moreira
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 10 -->
+
+            <a
+                class="card"
+                href="alunos/laura-rebeca.html"
+                data-nome="Laura Rebeca Lopes Araujo"
+            >
+
+                <span class="numero">10</span>
+
+                <span class="nome">
+                    Laura Rebeca<br>
+                    Lopes Araujo
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 11 -->
+
+            <a
+                class="card"
+                href="alunos/maria-eduarda.html"
+                data-nome="Maria Eduarda Oliveira Da Silva"
+            >
+
+                <span class="numero">11</span>
+
+                <span class="nome">
+                    Maria Eduarda<br>
+                    Oliveira Da Silva
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 12 -->
+
+            <a
+                class="card"
+                href="alunos/maria-vitoria.html"
+                data-nome="Maria Vitoria Silva Neves"
+            >
+
+                <span class="numero">12</span>
+
+                <span class="nome">
+                    Maria Vitoria<br>
+                    Silva Neves
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 13 -->
+
+            <a
+                class="card"
+                href="alunos/marina.html"
+                data-nome="Marina Nahsan Palumbo De Oliveira"
+            >
+
+                <span class="numero">13</span>
+
+                <span class="nome">
+                    Marina Nahsan<br>
+                    Palumbo De Oliveira
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 14 -->
+
+            <a
+                class="card"
+                href="alunos/melissa.html"
+                data-nome="Melissa Araujo Falcão Albuquerque"
+            >
+
+                <span class="numero">14</span>
+
+                <span class="nome">
+                    Melissa Araujo<br>
+                    Falcão Albuquerque
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 15 -->
+
+            <a
+                class="card"
+                href="alunos/pedro-antonio.html"
+                data-nome="Pedro Antônio Almeida De Matos Neto"
+            >
+
+                <span class="numero">15</span>
+
+                <span class="nome">
+                    Pedro Antônio<br>
+                    Almeida De Matos Neto
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 16 -->
+
+            <a
+                class="card"
+                href="alunos/pietro.html"
+                data-nome="Pietro Alessander Lopes Matos"
+            >
+
+                <span class="numero">16</span>
+
+                <span class="nome">
+                    Pietro Alessander<br>
+                    Lopes Matos
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 17 -->
+
+            <a
+                class="card"
+                href="alunos/rebeca.html"
+                data-nome="Rebeca De Aquino Damasceno"
+            >
+
+                <span class="numero">17</span>
+
+                <span class="nome">
+                    Rebeca De Aquino<br>
+                    Damasceno
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 18 -->
+
+            <a
+                class="card"
+                href="alunos/samuel-araujo.html"
+                data-nome="Samuel Araújo De Lima"
+            >
+
+                <span class="numero">18</span>
+
+                <span class="nome">
+                    Samuel Araújo<br>
+                    De Lima
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 19 -->
+
+            <a
+                class="card"
+                href="alunos/samuel-victor.html"
+                data-nome="Samuel Victor Carvalho De Oliveira"
+            >
+
+                <span class="numero">19</span>
+
+                <span class="nome">
+                    Samuel Victor<br>
+                    Carvalho De Oliveira
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 20 -->
+
+            <a
+                class="card"
+                href="alunos/shaira.html"
+                data-nome="Shaira Assunção Oliveira"
+            >
+
+                <span class="numero">20</span>
+
+                <span class="nome">
+                    Shaira Assunção<br>
+                    Oliveira
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 21 -->
+
+            <a
+                class="card"
+                href="alunos/tacielly.html"
+                data-nome="Tacielly Fonteles Barroso"
+            >
+
+                <span class="numero">21</span>
+
+                <span class="nome">
+                    Tacielly Fonteles<br>
+                    Barroso
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+
+            <!-- 22 -->
+
+            <a
+                class="card"
+                href="alunos/valentina.html"
+                data-nome="Valentina Costa Damasceno Lima"
+            >
+
+                <span class="numero">22</span>
+
+                <span class="nome">
+                    Valentina Costa<br>
+                    Damasceno Lima
+                </span>
+
+                <span class="botao">
+                    Conhecer →
+                </span>
+
+            </a>
+
+
+        </section>
+
+
+
+        <!-- SEM RESULTADO -->
+
+        <div id="semResultado">
+
+            Nenhum aluno encontrado.
+
+        </div>
+
+
+
+        <!-- FRASE FINAL -->
+
+        <section class="frase-final">
+
+            <h2>
+                O fim de uma etapa.<br>
+                <span>O começo de muitas histórias.</span>
+            </h2>
+
+            <p>
+
+                Que estas páginas permaneçam como uma
+                pequena lembrança de quem fomos, das
+                pessoas que conhecemos e de tudo aquilo
+                que ainda iremos construir.
+
+            </p>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================================
+         RODAPÉ
+    ====================================================== -->
+
+    <footer>
+
+        <p>
+
+            <strong>
+                Memórias do 9º Ano – 2026
+            </strong>
+
+        </p>
+
+        <p>
+
+            Uma lembrança para o futuro.
+
+        </p>
+
+        <p>
+
+            <span class="destaque">
+                22 histórias.
+            </span>
+
+            Uma turma.
+
+            Muitas memórias.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script>
+
+        const campoPesquisa =
+            document.getElementById(
+                "campoPesquisa"
+            );
+
+        const cards =
+            document.querySelectorAll(
+                ".card"
+            );
+
+        const semResultado =
+            document.getElementById(
+                "semResultado"
+            );
+
+
+        campoPesquisa.addEventListener(
+            "input",
+            function () {
+
+                const pesquisa =
+                    this.value
+                        .toLowerCase()
+                        .normalize("NFD")
+                        .replace(
+                            /[\u0300-\u036f]/g,
+                            ""
+                        );
+
+
+                let encontrados = 0;
+
+
+                cards.forEach(
+                    function (card) {
+
+                        const nome =
+                            card.dataset.nome
+                                .toLowerCase()
+                                .normalize("NFD")
+                                .replace(
+                                    /[\u0300-\u036f]/g,
+                                    ""
+                                );
+
+
+                        if (
+                            nome.includes(
+                                pesquisa
+                            )
+                        ) {
+
+                            card.style.display =
+                                "flex";
+
+                            encontrados++;
+
+                        } else {
+
+                            card.style.display =
+                                "none";
+
+                        }
+
+                    }
+                );
+
+
+                if (encontrados === 0) {
+
+                    semResultado.style.display =
+                        "block";
+
+                } else {
+
+                    semResultado.style.display =
+                        "none";
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+</body>
+
+</html>
